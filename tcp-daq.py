@@ -49,7 +49,7 @@ class socket_instrument(object):
     self.s.close()
 
 parser=argparse.ArgumentParser()
-parser.add_argument('nwav', help='capture number',type=int)
+parser.add_argument('nwav', help='number of captures',type=int)
 args=parser.parse_args()
 nwav=args.nwav
 
@@ -89,6 +89,6 @@ while wavenum < nwav:
   fdat.write('\n')
 
 t1=time.time()
-print u'Data acqusition completed in: {0} hours.'.format(str(datetime.timedelta(seconds=(t1-t0)))[0:7])
+print u'Acqusition completed in: {0} hours.'.format(str(datetime.timedelta(seconds=(t1-t0)))[0:7])
 print nwav/(t1-t0)
 scope.close()
